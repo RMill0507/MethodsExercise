@@ -1,10 +1,37 @@
-﻿namespace MethodsExercise
+﻿using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Security.AccessControl;
+using System.Security.Cryptography.X509Certificates;
+
+namespace MethodsExercise
 {
     internal class Program
     {
+        
+        public static int Multi(int num1, int num2) 
+        {
+            var answer = num1 * num2;
+            return answer;
+
+        }
        
+        public static int Subtract(int num1, int num2)
+        {
+            var answer = num1 - num2;
+            return answer;
+        }
+        public static int Sum(int num1, int num2,int num3)
+        {
+          var answer = num1 + num2 + num3;
+            return answer;
+        }
+
         static void Main(string[] args)
         {
+
+           
+
+
 
             // -----------------Exercise 1-------------------------
             //Name: Rob
@@ -33,13 +60,37 @@
             Console.WriteLine($"His favorite color is {color}");
             Console.WriteLine($"His favorite animal is a {animal}");
             Console.WriteLine($"He likes listening to {artist}");
+            
+            // -------------------Exercise 2----------------------------
+            var amountOfTrucks = Sum(2, 6, 10);
+            Console.WriteLine(amountOfTrucks);
+
+            var amountOfBaseballs = Subtract(2, 6);
+            Console.WriteLine(amountOfBaseballs);
+
+            var totalFootballs = Multi(2, 10);
+            Console.WriteLine(totalFootballs);
 
 
 
 
 
 
-            //-------------------Exercise 2----------------------------
+
+
         }
+
+
+
+
+
+
+        
+
+        
+
+
+
+
     }
 }
